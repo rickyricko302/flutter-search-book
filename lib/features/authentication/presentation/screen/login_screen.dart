@@ -38,13 +38,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            LottieBuilder.asset(
-              'assets/lottie/bg_auth_animation.json',
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              fit: BoxFit.cover,
-              repeat: true,
-              animate: true,
+            Opacity(
+              opacity: 0.1,
+              child: LottieBuilder.asset(
+                'assets/lottie/bg_auth_animation.json',
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                fit: BoxFit.cover,
+                repeat: true,
+                animate: true,
+              ),
             ),
             LayoutBuilder(
               builder: (context, constraint) {
